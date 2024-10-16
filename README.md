@@ -1,33 +1,31 @@
-# Ecommerce-Website
+# E-Commerce Application
 
 # Author
-Mohith L M
+Rohith Neralla
 ## Introduction
-E-commerce website repository! This project is designed to create a seamless online shopping experience. With an easy-to-navigate interface, users can browse, search, and purchase products effortlessly. For store owners, the admin panel simplifies managing inventory, orders, and customers. Built with modern web technologies, this project is scalable and customizable, ideal for developers aiming to create or improve their own e-commerce sites. 
+This repository contains an e-commerce website project designed to offer a smooth and intuitive online shopping experience. Users can easily browse, search, and purchase products, while store owners can efficiently manage inventory, orders, and customers through the admin panel. Built with modern web technologies, the project is scalable and customizable, making it ideal for developers looking to create or enhance their own e-commerce platforms.
 
 ## Details
-Clone the repository.
-Open the project in your IDE: IntelliJ IDEA (recommended) or Eclipse.
-If using IntelliJ IDEA, ensure it recognizes the project as a Maven and Spring Boot project. Also, adjust the working directory for Spring Boot to find the views (web pages). Check Web Directories in IntelliJ IDEA for guidance.
-Make sure you're in the JtProject directory.
-Configure the database connection in the application.properties file 
+Clone the repository and open it in your preferred IDE (IntelliJ IDEA recommended).
+Ensure the project is recognized as a Maven and Spring Boot project in IntelliJ. Adjust the working directory for Spring Boot to locate the views (web pages). Refer to IntelliJ’s Web Directories guide if needed.
+Navigate to the JtProject directory.
+Configure the database connection in the application.properties file.
 Run the project by executing the main method in JtSpringProjectApplication.java.
 Open http://localhost:8080/ in your browser.
-If you've run the basedata.sql script on the database, log in as admin with the provided credentials (admin/123); otherwise, manually create an admin user in the database.
-For normal user access, use the credentials (lisa/765).
+If you’ve run the basedata.sql script on the database, log in as admin with admin/123, or manually create an admin user in the database.
 
 ## Database
 
-MySQL or MariaDB serve as viable database options for this project. You can set up the database connection in the application.properties file by specifying the relevant values for the following properties: (it's advisable to avoid using the root username and choose another one instead)
+You can use MySQL or MariaDB as the database for this project. Update the database connection settings in the application.properties file with the following properties:
 
-If encountering the error java.lang.IllegalArgumentException: Could not resolve placeholder 'db.driver' in value "${db.driver}", it suggests adjusting the mysql-connector-java version in the pom.xml file to match your MySQL version. Additionally, ensure to reload your Maven project after making this change.
 
-    db.url=jdbc:mysql://[ip address of db]:[port of db]/ecommjava?createDatabaseIfNotExist=true
-    db.username=[username]
-    db.password=[password, if any]
+db.url=jdbc:mysql://[db ip]:[db port]/ecommjava?createDatabaseIfNotExist=true
+db.username=[your username]
+db.password=[your password, if applicable]
 
-After resolving this issue, it's necessary to populate the database with some initial data. This can be accomplished by executing the basedata.sql script on the database. Instructions for running this script may vary depending on the tool you're using to access the database, so it's recommended to refer to online resources for guidance.
+If you encounter the error java.lang.IllegalArgumentException: Could not resolve placeholder 'db.driver', ensure the mysql-connector-java version in the pom.xml file matches your MySQL version and reload the Maven project.
 
+After setting up the connection, populate the database by executing the basedata.sql script. Refer to relevant online resources for instructions based on the tool you’re using to access the database.
 ## Endpoints
 
 http://localhost:8080/
@@ -41,17 +39,4 @@ http://localhost:8080/admin/customers
 http://localhost:8080/admin/categories
 
 http://localhost:8080/admin/Dashboard
-
-## Some reference links to have an idea about the concepts used
-
-https://maven.apache.org/guides/index.html
-
-https://docs.spring.io/spring-boot/docs/2.6.4/maven-plugin/reference/htmlsingle/
-
-https://docs.spring.io/spring-boot/docs/2.6.4/maven-plugin/reference/htmlsingle/#build-image
-
-https://docs.spring.io/spring-boot/docs/2.6.4/reference/htmlsingle/#web
-
-https://spring.io/guides/gs/rest-service
-
 https://spring.io/guides/gs/serving-web-content
